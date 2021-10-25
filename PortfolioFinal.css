@@ -1,0 +1,927 @@
+:root {
+  /* --- COLORES */
+  --colorPri: #1a1d1c;
+  --colorSecun: #c0c494;
+  --colorTerc: #36cc8d;
+
+  /* --- FUENTES */
+  --fuenteRoboto: "Roboto";
+  --fuenteLobster: "Lobster", cursive;
+  --feunteMontserrat: "Montserrat", sans-serif;
+  --fuenteFjalla: "Fjalla One", sans-serif;
+
+  /* --- TIEMPO ANIMACION --- */
+}
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+#card1 .texto p,
+#card2 .texto h2,
+#card3 .texto p,
+#card4 .texto p {
+  line-height: 1.3;
+}
+#card1 .texto h1,
+#card2 .texto h1,
+#card3 .texto h1,
+#card4 .texto h1 {
+  font-family: var(--fuenteFjalla);
+  color: var(--colorTerc);
+}
+#card1 .texto h2,
+#card2 .texto h2,
+#card3 .texto h2,
+#card4 .texto h2 {
+  font-family: var(--feunteMontserrat);
+}
+#card1 .texto p:nth-of-type(1),
+#card2 h2,
+#card3 p:nth-of-type(1),
+#card4 p {
+  max-width: 65ch;
+}
+
+body {
+  background-color: var(--colorPri);
+}
+header {
+  background-color: var(--colorPri);
+  /* background-color: hotpink; */
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  padding: 0.5rem 0 2rem 0;
+  background-color: var(--colorPri);
+  display: flex;
+  width: 100%;
+  z-index: 50;
+}
+nav .div-nav1 {
+  width: 50%;
+  background-color: var(--colorPri);
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.div-nav1 span {
+  font-family: var(--fuenteLobster);
+  /* margin-left: 4rem; */
+  font-weight: 900;
+  color: var(--colorSecun);
+}
+.div-nav1 a {
+  display: block;
+  color: var(--colorTerc);
+  font-family: "Roboto";
+  text-decoration: none;
+  margin-left: 3rem;
+  align-self: center;
+}
+nav .burger {
+  width: 50%;
+  background-color: var(--colorPri);
+}
+nav #menuPrincipal {
+  width: 50px;
+  display: block;
+  margin: 0 2rem 0 auto;
+  transition: 1s;
+}
+
+nav .div-nav2 {
+  position: absolute;
+  padding-top: 1rem;
+  padding-right: 2rem;
+  top: 0;
+  left: 0;
+  right: 0;
+  list-style: none;
+  background-color: var(--colorPri);
+  border-bottom: var(--colorTerc) 5px solid;
+  display: none;
+}
+@keyframes bajarmenu {
+  0% {
+    transform: translateY(-10rem);
+  }
+  100% {
+    transform: translateY(0rem);
+  }
+}
+@keyframes subirmenu {
+  0% {
+    transform: translateY(0rem);
+  }
+  100% {
+    transform: translateY(-10rem);
+  }
+}
+.div-nav2 img {
+  width: 20px;
+  display: block;
+  margin: 0 10% 0 auto;
+}
+.div-nav2 a {
+  text-align: center;
+  padding: 0.5rem;
+  display: block;
+  color: var(--colorTerc);
+  font-weight: 500;
+  text-decoration: none;
+  font-family: var(--fuenteRoboto);
+  transition: 00.5s;
+}
+.div-nav2 li:nth-of-type(1) {
+  margin-left: auto;
+  position: relative;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------- */
+.card {
+  border-left: 4px solid var(--colorTerc);
+  border-right: 4px solid var(--colorTerc);
+}
+
+main {
+  background-color: var(--colorPri);
+}
+
+main #card1 {
+  background-color: var(--colorPri);
+  padding: 2rem 0% 5rem 0%;
+  position: relative;
+}
+
+#card1 .texto {
+  margin-top: 10rem;
+  padding: 3rem;
+  background-color: var(--colorPri);
+}
+#card1 .texto h1 {
+  font-weight: 900;
+  padding-bottom: 0.5rem;
+}
+#card1 .texto .linea {
+  display: block;
+  height: 4px;
+  width: 100%;
+  animation: linea 2s ease-in-out;
+}
+
+@keyframes linea {
+  0% {
+    width: 0%;
+    background-color: #75025c;
+  }
+  50% {
+    background-color: var(--colorTerc);
+  }
+  100% {
+    width: 100%;
+    opacity: 0;
+  }
+}
+
+#card1 .texto p:nth-of-type(1) {
+  margin: 2rem 0;
+  font-family: var(--feunteMontserrat);
+  font-weight: 500;
+  color: var(--colorSecun);
+}
+#card1 .texto span:nth-of-type(1) {
+  color: var(--colorTerc);
+}
+#card1 .texto button {
+  margin: 1rem 0;
+  display: block;
+  font-family: var(--feunteMontserrat);
+  color: var(--colorSecun);
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  border: 3px solid var(--colorTerc);
+  border-radius: 7px;
+}
+#card1 .card-div {
+  display: none;
+}
+#card1 .card-div img {
+  position: absolute;
+}
+
+.bocadillo {
+  margin-top: 2rem;
+  border: var(--colorTerc) 3px solid;
+  animation: bocadillo1 1s ease-in-out;
+  display: none;
+  position: relative;
+  box-shadow: 2.5px 2.5px 15px var(--colorTerc);
+}
+@keyframes bocadillo1 {
+  0% {
+    transform: translatey(-10rem);
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    transform: translatey(0rem);
+    opacity: 1;
+  }
+}
+.bocadillo span:nth-of-type(1) img {
+  position: absolute;
+  width: 20px;
+  top: -2rem;
+  right: 0rem;
+}
+
+.bocadillo span:nth-of-type(2) {
+  color: var(--colorTerc);
+  font-family: var(--fuenteLobster);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0.5rem;
+  width: fit-content;
+}
+.bocadillo span:nth-of-type(2) img {
+  width: 25px;
+  padding: 0;
+}
+
+.bocadillo p {
+  width: 100%;
+  background-color: #1a1d1c;
+  display: block;
+  padding: 2rem;
+  color: var(--colorSecun);
+  font-family: var(--feunteMontserrat);
+}
+.bocadillo #avatar {
+  display: none;
+}
+
+/* ------ CARD 2 --------- */
+#card2 img {
+  max-width: 100px;
+}
+#card2 {
+  background-color: var(--colorPri);
+  padding: 5rem 0% 5rem 0%;
+  position: relative;
+}
+#card2 .texto {
+  padding: 3rem;
+  background-color: var(--colorPri);
+}
+#card2 .texto h1 {
+  font-weight: 900;
+}
+#card2 .texto h2 {
+  font-size: 1rem;
+  margin: 2rem 0;
+  font-weight: 500;
+  color: var(--colorSecun);
+}
+#card2 .virtudes {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  justify-content: center;
+}
+#card2 .virtudes .design {
+  padding: 2.5rem;
+  margin: 0.5rem 0;
+  border-bottom: 3px solid var(--colorTerc);
+}
+#card2 .virtudes .design img {
+  display: block;
+  margin: 1.5rem auto;
+}
+#card2 .virtudes .design h3 {
+  color: var(--colorSecun);
+  font-family: var(--feunteMontserrat);
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+#card2 .virtudes .design p {
+  color: var(--colorSecun);
+  font-family: var(--feunteMontserrat);
+  text-align: left;
+  border-left: var(--colorTerc) 3.5px solid;
+  padding-left: 0.5rem;
+  margin: 1.5rem;
+}
+#card3 {
+  background-color: var(--colorPri);
+  padding: 10% 0% 5rem 0%;
+  position: relative;
+}
+#card3 .texto {
+  padding: 3rem 2rem;
+  background-color: var(--colorPri);
+}
+#card3 .texto h1 {
+  font-weight: 900;
+}
+#card3 .texto p {
+  font-size: 1rem;
+  margin: 2rem 0;
+  font-family: var(--feunteMontserrat);
+  font-weight: 500;
+  color: var(--colorSecun);
+}
+#card3 .texto #compas {
+  width: 200px;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
+#card3 #boton2 {
+  margin-bottom: 5rem;
+  padding: 0.5rem 1rem;
+  /* background-color: var(--colorPri); */
+  background-color: transparent;
+  color: var(--colorSecun);
+  border-radius: 7px;
+  font-family: "Montserrat", sans-serif;
+  transition: 0.5s ease-in-out;
+  border: 3px solid var(--colorTerc);
+}
+.metodologia {
+  background-color: #171817;
+  border: var(--colorTerc) 3px solid;
+  border-radius: 7px;
+  /* adapatar */
+  left: 0;
+  bottom: 0;
+  display: none;
+  animation: metodologia 1s ease-in-out;
+  z-index: 3;
+  box-shadow: 2.5px 2.5px 15px var(--colorTerc);
+}
+@keyframes metodologia {
+  0% {
+    transform: translatey(20rem);
+  }
+  100% {
+    transform: translatey(10rem);
+  }
+}
+.metodologia img {
+  border: none;
+  left: 0;
+  top: -2rem;
+  width: 20px;
+  border-radius: 50%;
+  padding: 3px;
+  transition: 1s;
+}
+
+.metodologia ul {
+  list-style: none;
+  padding: 3rem 1rem;
+}
+.metodologia ul li::first-letter {
+  color: var(--colorSecun);
+  font-weight: 400;
+}
+.metodologia ul li {
+  color: var(--colorTerc);
+  font-family: var(--feunteMontserrat);
+  margin: 1rem;
+}
+.metodologia ul li span {
+  color: var(--colorSecun);
+}
+
+/* ----- CARD 4 ----- */
+
+#card4 {
+  display: flex;
+  flex-direction: column;
+  padding: 5rem 0rem;
+  padding-top: 5rem;
+}
+#card4 .texto {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  margin-bottom: 0rem;
+}
+#card4 .texto h4 {
+  font-family: var(--feunteMontserrat);
+  color: var(--colorSecun);
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+#card4 .texto h1 {
+  font-weight: 900;
+  margin-bottom: 2rem;
+}
+
+#card4 p {
+  color: var(--colorSecun);
+  font-family: var(--feunteMontserrat);
+}
+#card4 span {
+  color: var(--colorTerc);
+}
+form {
+  padding: 3rem;
+  border: #75025c 3px solid;
+}
+
+form input {
+  border-radius: 7px;
+  outline: none;
+  border: none;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-family: var(--feunteMontserrat);
+  color: #488b88;
+  background-color: #252927;
+  display: block;
+  margin-bottom: 1rem;
+}
+#cajaGrande {
+  font-family: var(--feunteMontserrat);
+  border: none;
+  border-radius: 7px;
+  color: #488b88;
+  background-color: #252927;
+  display: block;
+  width: 100%;
+  height: 60%;
+  padding: 1rem 1rem;
+}
+
+form button {
+  display: block;
+  margin: 2rem auto;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  color: var(--colorSecun);
+  border: none;
+  border-radius: 10px;
+  font-family: "Montserrat", sans-serif;
+  transition: 0.5s ease-in-out;
+  border: 3px solid var(--colorTerc);
+}
+
+#firma {
+  text-align: center;
+  font-family: var(--fuenteRoboto);
+  padding: 0.5rem;
+  color: #36cc8d;
+  border-left: 4px solid var(--colorTerc);
+  border-right: 4px solid var(--colorTerc);
+}
+#firma span {
+  color: var(--colorSecun);
+  font-family: var(--fuenteLobster);
+}
+
+/* ---- MEDIA QUERY a 700px ----- */
+
+@media (min-width: 700px) and (max-width: 900px) {
+  nav {
+    display: flex;
+
+    position: fixed;
+    top: 0;
+    padding: 0;
+    background-color: var(--colorPri);
+    display: flex;
+    width: 100%;
+    z-index: 50;
+  }
+  nav .div-nav1 {
+    width: 40%;
+    position: static;
+  }
+
+  .div-nav1 a {
+    width: 100%;
+    display: block;
+    color: var(--colorTerc);
+    font-family: "Roboto";
+    text-decoration: none;
+    margin-left: 0;
+    padding-left: 3rem;
+    align-self: center;
+  }
+
+  nav .burger {
+    width: 100%;
+    background-color: var(--colorPri);
+  }
+  nav #menuPrincipal {
+    display: none;
+  }
+
+  nav .div-nav2 {
+    align-items: center;
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    list-style: none;
+    background-color: var(--colorPri);
+    display: flex;
+    border-bottom: none;
+    position: static;
+  }
+
+  .div-nav2 img {
+    display: none;
+  }
+
+  .div-nav2 a {
+    text-align: left;
+    padding: 0.5rem;
+    display: block;
+    color: var(--colorTerc);
+    font-weight: 500;
+    text-decoration: none;
+    font-family: var(--fuenteRoboto);
+    transition: 00.5s;
+  }
+  .div-nav2 li:nth-of-type(1) {
+    margin-left: auto;
+    position: relative;
+  }
+
+  #card1 .texto h1,
+  #card2 .texto h1,
+  #card3 .texto h1,
+  #card4 .texto h1 {
+    font-size: 3rem;
+  }
+
+  #card1 .card-div {
+    display: block;
+    position: absolute;
+    width: 100%;
+    min-height: 30px;
+    border-radius: 10px;
+  }
+  #card1 .card-div img {
+    width: 200px;
+    right: 2rem;
+    top: -5rem;
+    z-index: 3;
+  }
+  .bocadillo {
+    z-index: 4;
+    margin-left: 5rem;
+    width: 50%;
+  }
+
+  .bocadillo span:nth-of-type(1) img {
+    position: absolute;
+    width: 20px;
+    top: -2rem;
+    left: 0rem;
+  }
+
+  #card2 .virtudes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    justify-content: center;
+  }
+  #card2 .virtudes .design {
+    border-bottom: none;
+  }
+  #card3 .texto #compas {
+    right: 5rem;
+  }
+  .metodologia {
+    width: 75%;
+  }
+}
+
+/* ------------ Min 700 Max 900 ----------- */
+
+@media (min-width: 900px) {
+  nav {
+    display: flex;
+
+    position: fixed;
+    top: 0;
+    padding: 0;
+    background-color: var(--colorPri);
+    display: flex;
+    width: 100%;
+    z-index: 50;
+  }
+  nav .div-nav1 {
+    width: 40%;
+    position: static;
+  }
+
+  .div-nav1 a {
+    width: 100%;
+    display: block;
+    color: var(--colorTerc);
+    font-family: "Roboto";
+    text-decoration: none;
+    margin-left: 0;
+    padding-left: 3rem;
+    align-self: center;
+  }
+
+  nav .burger {
+    width: 100%;
+    background-color: var(--colorPri);
+  }
+  nav #menuPrincipal {
+    display: none;
+  }
+
+  nav .div-nav2 {
+    align-items: center;
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    list-style: none;
+    background-color: var(--colorPri);
+    display: flex;
+    border-bottom: none;
+    position: static;
+  }
+
+  .div-nav2 img {
+    display: none;
+  }
+
+  .div-nav2 a {
+    text-align: left;
+    padding: 0.5rem;
+    display: block;
+    color: var(--colorTerc);
+    font-weight: 500;
+    text-decoration: none;
+    font-family: var(--fuenteRoboto);
+    transition: 00.5s;
+  }
+  .div-nav2 li:nth-of-type(1) {
+    margin-left: auto;
+    position: relative;
+  }
+  main .card {
+    border: none;
+  }
+  main #card1 {
+    padding: 5% 5% 30rem 5%;
+  }
+
+  #card1 .texto {
+    padding: 0rem 5rem 5rem 5rem;
+    min-height: 20rem;
+    background-color: var(--colorPri);
+    /* box-shadow: var(--colorSecun) -5px 5px 0px 0; */
+    border-radius: 7px;
+    border-left: var(--colorTerc) 3px solid;
+  }
+  #card1 .texto h1 {
+    padding: 1rem 0;
+    font-size: 3rem;
+  }
+
+  #card1 .card-div {
+    display: block;
+    height: 1px;
+    width: 1px;
+  }
+  #card1 #boyOnComputer {
+    right: 5rem;
+    bottom: 17rem;
+    position: absolute;
+    width: 400px;
+  }
+
+  .bocadillo {
+    border: var(--colorTerc) 3px solid;
+    position: absolute;
+    display: none;
+    top: 30rem;
+    left: 8rem;
+    width: 500px;
+    border-radius: 7px;
+    animation: bocadillo1 1s ease-in-out;
+    box-shadow: 2.5px 2.5px 15px var(--colorTerc);
+    z-index: 10;
+  }
+  .bocadillo span:nth-of-type(1) img {
+    position: absolute;
+    width: 20px;
+    top: -2rem;
+    right: 0rem;
+  }
+  #card1 .popup {
+    padding: 2rem;
+    padding-top: 5rem;
+    color: var(--colorSecun);
+    font-family: var(--feunteMontserrat);
+    font-weight: 500;
+  }
+  .bocadillo #avatar {
+    display: block;
+    padding: 1rem;
+    width: 35%;
+    margin-left: 2rem;
+    background-color: #171817;
+  }
+
+  /* ---- card 2 ---- */
+
+  #card2 {
+    padding: 10% 5% 10rem 5%;
+  }
+  #card2 .texto {
+    border-left: 3px solid var(--colorTerc);
+    border-radius: 7px;
+    padding: 2.5rem;
+    padding-left: 5rem;
+    /* margin-bottom: 3rem; */
+  }
+  #card2 .texto h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 4rem;
+  }
+
+  #card2 .texto h2 {
+    width: 70ch;
+    line-height: 1.1;
+    line-height: 1.3;
+  }
+  #card2 .virtudes {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 3rem;
+    row-gap: 2rem;
+    padding: 2rem 0;
+  }
+
+  #card2 .virtudes div {
+    padding: 3rem 1.5rem 2.5rem 1.5rem;
+    border-radius: 7px;
+    /* margin: 2rem auto; */
+    background-color: #202422;
+  }
+  #card2 .virtudes .design img {
+    max-width: 75px;
+    margin-bottom: 2rem;
+    margin: 0 auto 3rem auto;
+  }
+
+  #card2 .virtudes .design h3 {
+    margin-left: 1.5rem;
+    text-align: left;
+    margin-bottom: 0rem;
+  }
+  #card2 .virtudes .design p {
+    border-left: var(--colorTerc) 3.5px solid;
+    padding-left: 0.5rem;
+  }
+
+  #card3 {
+    padding: 15rem 0 15rem 0;
+  }
+  #card3 .texto {
+    display: block;
+    margin: 0 auto 0 4rem;
+    border-left: 3px solid var(--colorTerc);
+    border-radius: 7px;
+    width: 80%;
+    padding: 0rem 5rem 5rem 5rem;
+  }
+  #card3 h1 {
+    font-size: 3rem;
+    padding: 0 0 2rem 0rem;
+  }
+  #card3 .texto #compas {
+    width: 400px;
+    bottom: 0rem;
+    right: 10rem;
+    z-index: 1;
+  }
+  #card3 p {
+    width: 60ch;
+    margin: 0 auto;
+  }
+  #card3 .texto button {
+    margin: 2rem 0 0 0rem;
+    padding: 0.5rem 1rem;
+    border-radius: 7px;
+    transition: 0.5s ease-in-out;
+    border: 3px solid var(--colorTerc);
+  }
+  .metodologia {
+    max-width: 550px;
+    background-color: #171817;
+    border: var(--colorTerc) 3px solid;
+    border-radius: 7px;
+    position: absolute;
+    bottom: 1rem;
+    left: 9rem;
+    display: block;
+    display: none;
+    animation: metodologia 1s ease-in-out;
+  }
+  @keyframes metodologia {
+    0% {
+      transform: translatey(20rem);
+    }
+    100% {
+      transform: translatey(0rem);
+    }
+  }
+  .metodologia img {
+    border: none;
+    position: absolute;
+    left: 0;
+    top: -2rem;
+    width: 20px;
+    border-radius: 50%;
+    padding: 3px;
+    transition: 1s;
+  }
+
+  /* ---- CARD 4 ---- */
+
+  #card4 {
+    display: flex;
+    flex-direction: row;
+    padding: 15rem 0;
+  }
+  #card4 .texto {
+    width: 50%;
+    border-radius: 7px;
+    padding-left: 5rem;
+    padding-top: 3rem;
+    margin-left: 4rem;
+    border-left: 3px solid var(--colorTerc);
+  }
+  #card4 .texto h4 {
+    color: var(--colorSecun);
+    font-family: var(--feunteMontserrat);
+  }
+  #card4 h1 {
+    font-weight: 900;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+  #card4 p {
+    color: var(--colorSecun);
+    font-family: var(--feunteMontserrat);
+    margin-bottom: 2rem;
+    width: 90%;
+  }
+  #card4 span {
+    color: var(--colorTerc);
+  }
+  #card4 form {
+    display: block;
+    width: 50%;
+    padding: 5% 3%;
+    background-color: #1a1d1c;
+  }
+}
+@media (min-width: 1100px) {
+  #card1 .card-div #boyOnComputer {
+    width: 400px;
+    right: 0;
+  }
+  #card2 .virtudes {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (min-width: 1200px) {
+  #card1 .texto h1,
+  #card2 .texto h1,
+  #card3 .texto h1,
+  #card4 .texto h1 {
+    font-size: 4rem;
+  }
+  #card1 .texto p:nth-of-type(1) {
+    width: 50%;
+  }
+  #card1 .card-div #boyOnComputer {
+    width: 600px;
+    right: 0;
+  }
+}

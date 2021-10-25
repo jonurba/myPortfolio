@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cairo:wght@700&family=Oswald:wght@600;700&family=Roboto:wght@700&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="PortfolioFinal.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="div-nav1">
+                <a>Jon<span>Urbaneja</span></a>
+                
+            </div>
+            <div class="burger">
+
+                <img onclick="abrirMenu()" id="menuPrincipal" src="../PortfolioFinalImgs/menu.svg" alt="">
+            
+              <div id="div-nav2" class="div-nav2">
+                 <img onclick="cerrarMenu()" src="../PortfolioFinalImgs/Xcierre.svg" alt="">
+                 <li><a href="#card1" onclick="cerrarMenu()" >Sobre mí</a></li>
+                 <li><a href="#card2" onclick="cerrarMenu()">Servicios</a></li>
+
+                 <li><a href="#card3" onclick="cerrarMenu()">Metodología</a></li>
+                 <li><a href="#card4" onclick="cerrarMenu()">Contacto</a></li>
+              </div>
+           </div>
+        </nav>
+    </header>
+    <main class="main">
+        <div class="card" id="card1">
+            <div class="texto">
+                <h1> DESARROLLADOR WEB</h1>
+                <span class="linea"></span>
+                <p>  Me llamo <span>Jon Urbaneja</span> y ayudo a emprendedores, autónomos y pequeñas empresas a tener una Web moderna y fresca para mejorar su imagen. Soy desarrollador Web, es decir: soy un programador especializado en crear sitios web. </p>
+                <button id="boton" onclick="abrir()">Saber más</button> 
+            </div>
+            
+            <div class="card-div">
+                <img  id="boyOnComputer" src="../PortfolioFinalImgs/boyOnComputer.svg" alt="">
+                
+            </div>
+            <div class="bocadillo" id="bocadillo">
+                
+                
+                <span id="cierreBoton" onclick="cerrar()"><img src="../PortfolioFinalImgs/Xcierre.svg" alt=""></span>
+                <p class="popup">Me llamo Jon, tengo 24 años y me dedico principalmente a crear sitios web para dar visibilidad a mis clientes y ofrecer o mejorar su espacio digital. <br><br> He aprendido principalmente HTML5, CSS3 y JS, teconologías con las que construyo y maqueto mis proyectos. </p>
+                <span ><img src="../PortfolioFinalImgs/pin.svg" alt="">Maruri, Bizkaia </span>
+                <img id="avatar" src="../PortfolioFinalImgs/miAvatar.svg" alt="">
+
+            </div>
+        </div>
+
+        <div class="card" id="card2">
+            <div class="texto">
+                <h1>SERVICIOS</h1>
+                <!-- <h4>¿Cual es mi trabajo?</h4> -->
+                <h2>¿Cual es mi trabajo? Ayudo a emprendedores, autonomos y pequeñas empresas a tener una web moderna y fresa para mejorar su imagen. Entre los servicios que ofrezco se encuentran los siguientes:
+                </h2>
+            </div>
+            <div class="virtudes">
+
+                <div class="design">
+                    <img src="../PortfolioFinalImgs/diseño.svg" alt="">
+                    <h3>Diseño Web</h3>
+                    <p> Estudio el proyecto y decido la estructura y el aspecto que debe tomar.
+                        </p>
+                </div>
+                <div class="design">
+                    <img src="../PortfolioFinalImgs/desarrollo.svg" alt="">
+                    <h3>Desarrollo Web</h3>
+                    <p>Despues del diseño me encargo de programarlo escribiendo codigo.</p>
+                </div>
+                <div class="design">
+                    <img src="../PortfolioFinalImgs/usuario.svg" alt="">
+                    <h3>Experiencia</h3>
+                    <p>Siempre busco que la experiencia de usuario sea agradable e intuitiva para los visitantes que reciba la página. </p>
+                </div>
+                <div class="design">
+                    <img src="../PortfolioFinalImgs/responsive.svg" alt="">
+                    <h3>Responsive</h3>
+                    <p>Me encargo de hacer el sitio Web Responsive, es decir: adaptable a pantallas de todos los tamaños </p>
+                </div>
+                <div class="design">
+                    <img src="../PortfolioFinalImgs/idiomas.svg" alt="">
+                    <h3>Idiomas</h3>
+                    <p>Puedes elegir hacer tu sitio Web en Español, Euskera o Inglés. </p>
+                </div>
+                <div class="design">
+                    <img src="../PortfolioFinalImgs/mantenimiento.svg" alt="">
+                    <h3>Mantenimiento</h3>
+                    <p>Para quien quiera actualizar su sitio Web y para resolver problemas y dudas. </p>
+                </div>
+                
+            </div>
+        </div>
+        <div class="card" id="card3" >
+            <div class="texto">
+                <h1>METODOLOGIA PROYECTOS</h1>
+                <p>Nos dedicamos tanto al desarrollo de apps como de sitios web y ponemos nuestros servicios al alcance tu mano para conseguir una mejor y actualizada presencia digital</p>
+                <button onclick="abrir2()" id="boton2">Saber más</button>
+
+                <img  id="compas" src="../PortfolioFinalImgs/compas.svg" alt="">
+
+                
+                <div id="metodologia" class="metodologia"> 
+                    <span onclick="cierre()"  id="cierreBoton2"><img src="../PortfolioFinalImgs/Xcierre.svg"  alt=""></span>
+                    
+                    <ul>
+                        <li>1. Requerimientos <span>Conozco al cliente, me dice sus metas y reunimos el material necesario para el diseño.</span></li>
+                        <li>2. Diseño <span>Realizo el diseño que finalmente se presentará.</span></li>
+                        <li>3. Desarrollo <span>Escribo el codigo necesario para dar vida al diseño.</span></li>
+                        <li>4. Entrega <span>Una vez dado el visto bueno por parte del cliente, se hace pública y le entrego los datos necesarios (datos del dominio,servidor...)</span></li>
+                        <li>5. Mantenimiento <span>Para mantener la Web actualizada y en buen funcionamiento cuando el cliente crea necesario.</span></li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="card" id="card4" >
+            <div class="texto">
+                <h4>Necesitas un presupuesto?</h4>
+                <h1>CONTACTA CONMIGO</h1>
+                <p>Si necesitas de un sitio web o si quieres salir de dudas con un proyecto en el que creas, contacta conmigo.
+                    </p>
+                <p>Me puedes escribir a traves de este formulario a la derecha o bien puedes escribirme a mi correo <span>UrbanejaDesarrollo@gmail.com</span> para consultarme.</p>
+            </div>    
+            <form action=”UrbanejaDesarrollo.com ”
+
+
+            method=”POST”
+            
+            
+            enctype=”multipart/form-data”
+            
+            
+            name=”EmailForm”>
+                <input type="text" placeholder="nombre" name="nomobre">
+                <input type="text" placeholder="apellido" name="first_name">
+                <input type="text" placeholder="correo elctronico" name="email">
+                <textarea name="message" id="cajaGrande" cols="30" rows="10" placeholder="Mensaje aqui"></textarea>
+                <button type="submit" value="submit" name="submit">Enviar</button>
+            </form>
+        </div>
+    </main>
+    <p id="firma">Jon<span>Urbaneja</span></p>
+    <script src="PortfolioFinal.js"></script>
+    </body>
+</html>
